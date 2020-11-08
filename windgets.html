@@ -1,3 +1,44 @@
-<h1>Prochainement</h1>
+<link rel="stylesheet" href="w-style.css">
+<script src="w-script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-<a href="https://github.com/sumokai-git/windgets">Github</a>
+<nav id="header-nav" class="navbar navbar-inverse navbar-default visible-xs">
+  <div class="container-fluid">
+  	<div class="navbar-header">
+	 <i id="sidebarTogglebtn" class="fa fa-bars fa-2x toggle-btn pull-left"></i>
+	<a class="navbar-brand" href="#">BrandName</a>
+	<a class></a>
+    </div>
+  </div>
+</nav>
+<div id="sidebar-wrapper">
+	<!-- Sidebar Header -->
+	<div class="sidebar-header">
+		<h2 class="sidebar-brand">BrandName</h2>
+		<i class="fa fa-2x fa-times sidebar-close"></i>
+	</div>
+	<div class="sidebar-menu">
+	<ul>
+		<li class="active">
+		  <a href="#">Home</a>
+		</li>
+		<li data-toggle="collapse" data-target="#sub-menu-1" >
+		  <a href="#">
+			 Page 1<span class="caret"></span></a>
+			<ul class="collapse" id="sub-menu-1">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+		</li>
+		<li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+	  </ul> 
+	</div>
+</div>
+<div id="content-wrapper" class="container">
+</div>
+	<div class="overlay"></div>
+<div id="footer-wrapper" class="container"></div>

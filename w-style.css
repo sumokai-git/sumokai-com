@@ -1,113 +1,189 @@
 body {
-    font-size: 16px;
-    background-color: #fff3c7;
-    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
-  
-  #sidebar-wrapper {
+  header {
+      padding: 16px;
+    text-decoration: none;
+      font-size: 30px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      text-align: center;
+  }
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
       position: fixed;
-      z-index: 2;
-      top: 50px;
-      bottom: 0px;
-      width: 220px;
-      left: -220px;
-      background-color: #222;
-        transition: left .3s ease;
-      overflow-y: auto;
+  }
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+   
+  .sidebar a.active {
+    color: #2196f3;
   }
   
-  #sidebar-wrapper.active {
-      left: 0px;
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
   }
   
-  #sidebar-wrapper .sidebar-header {
-      padding: 10px 20px;
-      background: #585454;
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
   }
-  
-  .sidebar-header{
-      display: none;
+  .j3 {
+      padding: 0 8px;
+      margin-top: 16px;
+      margin-bottom: 16px;
   }
-  
-  #header-nav{
-      z-index: 2;	
+  .j168 {
+      width: 100%;
+      font-weight: 400;
+      text-transform: none;
+      justify-content: flex-start;
   }
-  
-  .navbar-header .toggle-btn {
-      padding-top: 10px;
-      padding-left: 20px;
-  }
-  
-  /*** Menu Items***/
-  .sidebar-menu {
-      margin: 0px;
-      list-style: none;
-  }
-  
-  .sidebar-menu a {
-      display: block;
-      padding: 8px 16px 8px 30px;
-      color: #9d9d9d;
+  .j114 {
       text-decoration: none;
+  }
+  .j181 {
+      color: rgba(0, 0, 0, 0.87);
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      min-width: 64px;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      min-height: 36px;
+      box-sizing: border-box;
+      line-height: 1.4em;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 500;
+      border-radius: 4px;
+      text-transform: uppercase;
+  }
+  .j58 {
+      color: inherit;
       cursor: pointer;
+      margin: 0;
+      border: 0;
+      display: inline-flex;
+      padding: 0;
+      outline: none;
+      position: relative;
+      user-select: none;
+      align-items: center;
+      border-radius: 0;
+      vertical-align: middle;
+      justify-content: center;
+      text-decoration: none;
+      background-color: transparent;
+  }
+  .j169 {
+      color: #2196f3;
+      font-weight: 500;
+  }
+  .j216 {
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 16px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+  .j216 h1 {
+      color: rgba(0, 0, 0, 0.54);
+      margin: 32px 0 16px;
+      font-size: 2.8125rem;
+      font-weight: 400;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      line-height: 1.13333em;
+      margin-left: -.02em;
+  }
+  .j216 h2 {
+      color: rgba(0, 0, 0, 0.54);
+      margin: 32px 0 24px;
+      font-size: 2.125rem;
+      font-weight: 400;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      line-height: 1.20588em;
+  }
+  .j216 a, .j216 a code {
+      color: rgb(225, 0, 80);
+      text-decoration: none;
+  }
+  .j216 .description {
+      color: rgba(0, 0, 0, 0.87);
+      margin: 0 0 40px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      line-height: 1.35417em;
+  }
+  p {
+      display: block;
+  }
+  ul, menu, dir {
+      display: block;
+      list-style-type: disc;
+      margin: 1em;
   }
   
-  .sidebar-menu ul ul a{
-      padding-left: 40px
+  .j216 p code, .j216 ul code, .j216 pre code {
+      font-size: 14px;
+      line-height: 1.6;
   }
   
-  .sidebar-menu a.active,
-  .sidebar-menu a:hover {
-      color: white;
-      background-color: #777777;
+  .j216 code {
+      color: rgba(0, 0, 0, 0.87);
+      display: inline-block;
+      padding: 3px 6px;
+      font-size: 14px;
+      line-height: 1.6;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      background-color: #fff;
   }
-  
-  .sidebar-menu ul ul{
-      background-color: black;
+  .j216 thead tr {
+      height: 64px;
   }
-  
-  .sidebar-menu ul {
-      padding: 0px;
-      margin: 0px;
-      list-style: none;
+  .j216 th {
+      padding: 0 16px 0 8px;
+      text-align: left;
+      white-space: pre;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   }
-  
-  .sidebar-menu li {
-      list-style: none;
-      padding-left: 0px;
-      border-bottom: 1px solid #23282e;
+  .j216 tbody {
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 14px;
+      line-height: 1.5;
   }
-  
-  
-  .overlay {
-      /* full screen */
-      width: 100vw;
-      height: 100vh;
-      /* transparent black */
-      background: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: none;
-      /* middle layer, i.e. appears below the sidebar */
-      z-index: 1;
+  .j216 td {
+      padding: 8px 16px 8px 8px;
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   }
-  
-  @media (min-width: 767px) {
-    #sidebar-wrapper {
-      left: 0px;
-       top: 0px;
+  td, th {
+      display: table-cell;
+      vertical-align: inherit;
+  }
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
     }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
   
-      .sidebar-header{
-          display: block;
-      }
-      
-      .sidebar-header .sidebar-close{
-          display : none;
-      }
-  
-      #content-wrapper{
-          margin-left: 220px;
-      }
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
   }

@@ -1,0 +1,437 @@
+<link rel="stylesheet" href="w-style.css">
+
+<body>
+  <nav class="sidebar">
+    <header>Windgets</header>
+    <hr/>
+    <a class="active" href="#Installation">Installation</a>
+    <a href="#Usage">Utiliser Windgets</a>
+    <a href="#supported-components">Télécharger</a>
+    <a href="#comparison-with-other-libraries">Versions</a>
+    <a href="#example-projects">Example Projects</a>
+    <a href="#FAQ">Contact</a>
+  </nav>
+  <main>
+  <div class="content">
+    <div id="Installation" class="j216 markdown-body j3">
+    <h1>
+    <a class="anchor-link" id="installation"></a>Installation
+    <a class="anchor-link-style" href="#installation"></a>
+    </h1>
+    <p class="description">Install Material-UI, the world's most popular React UI framework.</p>
+  
+  <p>Material-UI is available as an <a href="https://www.npmjs.com/package/@material-ui/core">npm package</a>.</p>
+  
+      <h2>
+        <a class="anchor-link" id="npm"></a>npm<a class="anchor-link-style" href="#npm">
+        </a></h2>
+    <p>To install and save in your <code>package.json</code> dependencies, run:</p>
+  <pre><code class="language-sh">npm install @material<span class="token operator">-</span>ui<span class="token operator">/</span>core</code></pre>
+  <p>Please note that <a href="https://www.npmjs.com/package/react">react</a> &gt;= 16.3.0 and <a href="https://www.npmjs.com/package/react-dom">react-dom</a> &gt;= 16.3.0 are peer dependencies.</p>
+  
+      <h2>
+        <a class="anchor-link" id="roboto-font"></a>Roboto Font<a class="anchor-link-style" href="#roboto-font">
+        </a></h2>
+    <p>Material-UI was designed with the <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>
+  font in mind. So be sure to follow <a href="/style/typography#general">these instructions</a>.
+  For instance, via Google Web Fonts:</p>
+  <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family=Roboto:300,400,500<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+  
+      <h2>
+        <a class="anchor-link" id="font-icons"></a>Font Icons<a class="anchor-link-style" href="#font-icons">
+        </a></h2>
+    <p>In order to use the font <code>Icon</code> component you must first add the <a href="https://material.io/tools/icons/">Material icons</a> font.
+  Here are <a href="/style/icons#font-icons">some instructions</a>
+  on how to do so.
+  For instance, via Google Web Fonts:</p>
+  <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/icon?family=Material+Icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+  
+      <h2>
+        <a class="anchor-link" id="svg-icons"></a>SVG Icons<a class="anchor-link-style" href="#svg-icons">
+        </a></h2>
+    <p>In order to use prebuilt SVG Material icons, such as those found in the <a href="/demos/app-bar/">component demos</a>
+  you must first install the <a href="https://www.npmjs.com/package@material-ui/icons">@material-ui/icons</a> package:</p>
+  <pre><code class="language-sh">npm install @material<span class="token operator">-</span>ui<span class="token operator">/</span>icons</code></pre>
+  
+      <h2>
+        <a class="anchor-link" id="cdn"></a>CDN<a class="anchor-link-style" href="#cdn">
+        </a></h2>
+    <p>You can start using Material-UI with minimal Front-end infrastructure,
+  which is great for prototyping. We discourage using this approach in production though -
+  the client has to download the entire library, regardless of which components are actually used,
+  affecting performance and bandwidth utilisation.</p>
+  <h4>UMD releases</h4><p>We are providing two Universal Module Definition (UMD) files:</p>
+  <ul>
+  <li>one for development: <a href="https://unpkg.com/@material-ui/core/umd/material-ui.development.js">https://unpkg.com/@material-ui/core/umd/material-ui.development.js</a></li>
+  <li>one for production: <a href="https://unpkg.com/@material-ui/core/umd/material-ui.production.min.js">https://unpkg.com/@material-ui/core/umd/material-ui.production.min.js</a></li>
+  </ul>
+  <p>You can follow <a href="https://github.com/mui-org/material-ui/tree/master/examples/cdn">this CDN example</a> to quickly get started.</p>
+    <div class="j216 markdown-body j3">
+      <h1>
+        <a class="anchor-link" id="Usage"></a>Usage<a class="anchor-link-style" href="#usage">
+        </a></h1>
+    <p class="description">Get started with React and Material-UI in no time.</p>
+  
+  <p>Material-UI components work in isolation.
+  <strong>They are self-supporting</strong>, and will inject, and only inject, the styles they need to display.
+  They don't rely on any global style-sheets such as <a href="https://github.com/necolas/normalize.css/">normalize.css</a>,</p>
+  <p>You can use any of the components as demonstrated in the documentation.
+  Please refer to each component's <a href="/demos/buttons/">demo page</a> to see how they should be imported.</p>
+  
+      <h2>
+        <a class="anchor-link" id="quick-start"></a>Quick start<a class="anchor-link-style" href="#quick-start">
+        </a></h2>
+    <p>Here's a quick example to get you started, <strong>it's literally all you need</strong>:</p>
+  <pre><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Button'</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>contained<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        Hello World
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  <p>Yes, this really is all you need to get started, as you can see in this live and interactive demo:</p>
+  </div>
+  </div>
+
+  <div class="j216 markdown-body j3">
+      <h1>
+        <a class="anchor-link" id="supported-platforms"></a>Supported Platforms<a class="anchor-link-style" href="#supported-platforms">
+        </a></h1>
+    <p class="description">Learn about the platforms, from modern to old, that are supported by Material-UI.</p>
+  
+  
+      <h2>
+        <a class="anchor-link" id="browser"></a>Browser<a class="anchor-link-style" href="#browser">
+        </a></h2>
+    <p>Material-UI supports the latest, stable releases of all major browsers and platforms.
+  We also support Internet Explorer 11.
+  You don't need to provide any JavaScript polyfill as we manage unsupported browser features internally and in isolation.</p>
+  <table>
+  <thead>
+  <tr>
+  <th>IE</th>
+  <th>Edge</th>
+  <th>Firefox</th>
+  <th>Chrome</th>
+  <th>Safari</th>
+  </tr>
+  </thead>
+  <tbody><tr>
+  <td>11</td>
+  <td>&gt;= 14</td>
+  <td>&gt;= 52</td>
+  <td>&gt;= 49</td>
+  <td>&gt;= 10</td>
+  </tr>
+  </tbody></table>
+      <h2>
+        <a class="anchor-link" id="server"></a>Server<a class="anchor-link-style" href="#server">
+        </a></h2>
+    <p>Because Material-UI supports server side rendering, we need to support the latest, stable releases of <a href="https://github.com/nodejs/node">Node.js</a>.
+  We try to support the <a href="https://github.com/nodejs/Release#lts-schedule1">last active LTS version</a>. Right now, we support <strong>node v6.x</strong> and newer versions.</p>
+  </div>
+  <div class="j216 markdown-body j3">
+      <h1>
+        <a class="anchor-link" id="example-projects"></a>Example Projects<a class="anchor-link-style" href="#example-projects">
+        </a></h1>
+    <p class="description">Are you looking for an example project to get started?</p>
+  
+  <p>We host some example projects which you can find in the <a href="https://github.com/mui-org/material-ui">GitHub repository</a> under the <a href="https://github.com/mui-org/material-ui/tree/master/examples"><code>/examples</code></a> folder:</p>
+  <ul>
+  <li><a href="https://github.com/mui-org/material-ui/tree/master/examples/create-react-app">Create React App</a></li>
+  <li><a href="https://github.com/mui-org/material-ui/tree/master/examples/nextjs">Next.js</a></li>
+  <li><a href="https://github.com/mui-org/material-ui/tree/master/examples/gatsby">Gatsby</a></li>
+  <li><a href="https://github.com/mui-org/material-ui/tree/master/examples/cdn">CDN</a></li>
+  <li>And more</li>
+  </ul>
+  <p>Create React App is an awesome project for learning React.
+  Have a look at <a href="https://github.com/facebook/create-react-app/blob/master/README.md#popular-alternatives">the alternatives available</a> to see which project best fits your needs.</p>
+  <p>The source code for this documentation site is also included in the repository.
+  This is a slightly more complex project.
+  Check out the <a href="https://github.com/mui-org/material-ui/tree/master/docs"><code>/docs</code></a> folder for
+  build instructions.</p>
+  </div>
+    <div class="j216 markdown-body j3">
+      <h1>
+        <a class="anchor-link" id="FAQ"></a>Frequently Asked Questions<a class="anchor-link-style" href="#frequently-asked-questions">
+        </a></h1>
+    <p class="description">Stuck on a particular problem? Check some of these common gotchas first.</p>
+  
+  <p>If you still can't find what you're looking for, you can ask the community in <a href="https://gitter.im/mui-org/material-ui">gitter</a>.
+  For how-to questions and other non-issues, please use <a href="https://stackoverflow.com/questions/tagged/material-ui">StackOverflow</a> instead of Github issues. There is a StackOverflow tag called <code>material-ui</code> that you can use to tag your questions.</p>
+  
+      <h2>
+        <a class="anchor-link" id="why-aren-39-t-my-components-rendering-correctly-in-production-builds-"></a>Why aren't my components rendering correctly in production builds?<a class="anchor-link-style" href="#why-aren-39-t-my-components-rendering-correctly-in-production-builds-">
+        </a></h2>
+    <p>This is likely an n°1 issue that happens due to class name conflicts once your code is in a production bundle.
+  For Material-UI to work, the <code>classNames</code> values of all components on a page must be generated by a single instance of the <a href="/customization/css-in-js#creategenerateclassname-options-class-name-generator">class name generator</a>.</p>
+  <p>To correct this issue, all components on the page need to be initialized such that there is only ever <strong>one class name generator</strong> between them.</p>
+  <p>You could end up accidentally using two class name generators in a variety of scenarios:</p>
+  <ul>
+  <li>You accidentally <strong>bundle</strong> two versions of Material-UI. You might have a dependency not correctly setting Material-UI as a peer dependency.</li>
+  <li>You are using <code>JssProvider</code> for a <strong>subset</strong> of your React Tree.</li>
+  <li>You are using a bundler and it is splitting code in a way results in multiple class name generator instances to be created.<blockquote>
+  <p>If you are using webpack with the <a href="https://webpack.js.org/plugins/split-chunks-plugin/">SplitChunksPlugin</a>, try configuring the <a href="https://webpack.js.org/configuration/optimization/#optimization-runtimechunk"><code>runtimeChunk</code> setting under <code>optimizations</code></a>.</p>
+  </blockquote>
+  </li>
+  </ul>
+  <p>Overall, it's simple to recover from this problem by wrapping each Material-UI application with <a href="/customization/css-in-js#jssprovider"><code>JssProvider</code></a> components at the top of their component trees <strong>and using a single class name generator shared between them</strong>.</p>
+  <p><a href="/customization/css-in-js#jssprovider">A resolution example</a>. The last part of any solution will vary based on what bundler you are using, but the overall goal is to ensure the common module that contains the first snippet above only gets loaded and run once.</p>
+  <p>⚠️ You are in the hurry? Rest assured, we provide an option to make the class names <strong>deterministic</strong> as a quick escape hatch: <a href="/customization/css-in-js#global-css"><code>dangerouslyUseGlobalCSS</code></a>.</p>
+  
+      <h2>
+        <a class="anchor-link" id="why-do-the-fixed-positioned-elements-move-when-a-modal-is-opened-"></a>Why do the fixed positioned elements move when a modal is opened?<a class="anchor-link-style" href="#why-do-the-fixed-positioned-elements-move-when-a-modal-is-opened-">
+        </a></h2>
+    <p>We block the scroll as soon as a modal is opened.
+  This prevents interacting with the background when the modal should be the only interactive content, however, removing the scrollbar can make your <strong>fixed positioned elements</strong> move.
+  In this situation, you can apply a global <code>.mui-fixed</code> class name to tell Material-UI to handle those elements.</p>
+  
+      <h2>
+        <a class="anchor-link" id="how-can-i-disable-the-ripple-effect-on-the-whole-app-"></a>How can I disable the ripple effect on the whole app?<a class="anchor-link-style" href="#how-can-i-disable-the-ripple-effect-on-the-whole-app-">
+        </a></h2>
+    <p>The best solution at present is to write wrapping components for all the Material-UI components showing a ripple.
+  The ripple effect is exclusively coming from the <code>BaseButton</code> component.
+  You can find the components using the ButtonBase <a href="https://github.com/mui-org/material-ui/search?utf8=%E2%9C%93&amp;q=%22%2F%2F+%40inheritedComponent+ButtonBase%22">here</a>.
+  Then, all you have to do is to provide the <code>disableRipple</code> property.</p>
+  
+      <h2>
+        <a class="anchor-link" id="do-i-have-to-use-jss-to-style-my-app-"></a>Do I have to use JSS to style my app?<a class="anchor-link-style" href="#do-i-have-to-use-jss-to-style-my-app-">
+        </a></h2>
+    <p>It's highly recommended:</p>
+  <ul>
+  <li>It comes built in, so carries no additional bundle size overhead.</li>
+  <li>It's fast &amp; memory efficient.</li>
+  <li>It has a clean, consistent <a href="http://cssinjs.org/json-api/">API</a>.</li>
+  <li>It supports a number of advanced features, either natively, or through <a href="http://cssinjs.org/plugins/">plugins</a>.</li>
+  </ul>
+  <p>However perhaps you're adding some Material-UI components to an app that already uses another styling solution,
+  or are already familiar with a different API, and don't want to learn a new one? In that case, head over to the
+  <a href="/guides/interoperability">Style Library Interoperability</a> section,
+  where we show how simple it is to restyle Material-UI components with alternative style libraries.</p>
+  
+      <h2>
+        <a class="anchor-link" id="when-should-i-use-inline-style-vs-classes-"></a>When should I use inline-style vs classes?<a class="anchor-link-style" href="#when-should-i-use-inline-style-vs-classes-">
+        </a></h2>
+    <p>As a rule of thumb, only use inline-style for dynamic style properties. The CSS alternative provides more advantages, such as:</p>
+  <ul>
+  <li>auto-prefixing</li>
+  <li>better debugging</li>
+  <li>media queries</li>
+  <li>keyframes</li>
+  </ul>
+  
+      <h2>
+        <a class="anchor-link" id="how-do-i-use-react-router-"></a>How do I use react-router?<a class="anchor-link-style" href="#how-do-i-use-react-router-">
+        </a></h2>
+    <p>We have documented how to use a <a href="/demos/buttons#third-party-routing-library">third-party routing library</a> with the <code>ButtonBase</code> component.
+  A lot of our interactive components use it internally:
+  <code>Button</code>, <code>MenuItem</code>, <code>&lt;ListItem button /&gt;</code>, <code>Tab</code>, etc.
+  You can use the same solution with them.</p>
+      <h2>
+        <a class="anchor-link" id="how-do-i-combine-the-withstyles-and-withtheme-hocs-"></a>How do I combine the <code>withStyles()</code> and <code>withTheme()</code> HOCs?<a class="anchor-link-style" href="#how-do-i-combine-the-withstyles-and-withtheme-hocs-">
+        </a></h2>
+    <p>There are a number of different options:</p>
+  <p><strong><code>withTheme</code> option:</strong></p>
+  <pre><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">,</span> <span class="token punctuation">{</span> withTheme<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Modal<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  <p><strong><code>compose()</code> helper function:</strong></p>
+  <pre><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> compose <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'recompose'</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">compose</span><span class="token punctuation">(</span>
+    <span class="token function">withTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">(</span>Modal<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  <p><strong>raw function chaining:</strong></p>
+  <pre><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">)</span><span class="token punctuation">(</span>Modal<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  
+      <h2>
+        <a class="anchor-link" id="how-can-i-access-the-dom-element-"></a>How can I access the DOM element?<a class="anchor-link-style" href="#how-can-i-access-the-dom-element-">
+        </a></h2>
+    <p>Wrap the component with the <a href="/api/root-ref"><code>&lt;RootRef&gt;</code></a> helper.</p>
+  
+      <h2>
+        <a class="anchor-link" id="why-are-the-colors-i-am-seeing-different-from-what-i-see-here-"></a>Why are the colors I am seeing different from what I see here?<a class="anchor-link-style" href="#why-are-the-colors-i-am-seeing-different-from-what-i-see-here-">
+        </a></h2>
+    <p>The documentation site is using a custom theme. Hence, the color palette is
+  different from the default theme that Material-UI ships. Please refer to <a href="/customization/themes">this
+  page</a> to learn about theme customization.</p>
+  
+      <h2>
+        <a class="anchor-link" id="material-ui-is-awesome-how-can-i-support-the-project-"></a>Material-UI is awesome. How can I support the project?<a class="anchor-link-style" href="#material-ui-is-awesome-how-can-i-support-the-project-">
+        </a></h2>
+    <p>There are many ways to support Material-UI:</p>
+  <ul>
+  <li>Improve <a href="https://github.com/mui-org/material-ui/tree/master/docs">the documentation</a>.</li>
+  <li>Help others to get started.</li>
+  <li><a href="https://twitter.com/MaterialUI">Spread the word</a>.</li>
+  <li>Answer <a href="https://stackoverflow.com/questions/tagged/material-ui">StackOverflow questions</a> or <a href="https://github.com/mui-org/material-ui/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion">issues marked as question</a> in the repository.</li>
+  </ul>
+  <p>If you use Material-UI in a commercial project and would like to support its continued development by becoming a <strong>Sponsor</strong>,
+  or in a side or hobby project and would like to become a backer, you can do so through <a href="https://opencollective.com/material-ui">OpenCollective</a>.</p>
+  <p>All funds raised are managed transparently, and Sponsors receive recognition in the README and on the Material-UI home page.</p>
+  </div>
+    <div class="j216 markdown-body j3">
+      <h1>
+        <a class="anchor-link" id="comparison-with-other-libraries"></a>Comparison with other libraries<a class="anchor-link-style" href="#comparison-with-other-libraries">
+        </a></h1>
+    <p class="description">You’re here because you want to know if Material-UI can solve your specific problems better. That’s what we hope to answer for you here.</p>
+  
+  <p>This is definitely one of the most challenging pages in the guide to write, but we do feel it’s important.
+  Odds are, you’ve had problems you tried to solve and you’ve used another library to solve them.</p>
+  <p>We’d like your help keeping this document up-to-date because the JavaScript world moves fast!
+  If you notice an inaccuracy or something that doesn’t seem quite right, please let us know by
+  <a href="https://github.com/mui-org/material-ui/issues/new?title=%5Bdocs%5D+Inaccuracy+in+comparison+guide">opening an issue</a>.</p>
+  <p>We cover the following libraries:</p>
+  <ul>
+  <li><a href="#material-ui">Material-UI</a></li>
+  <li><a href="#material-design-lite-mdl-">Material Design Lite (MDL)</a></li>
+  <li><a href="#material-components-web-mdc-web-">Material Components Web (MDC-web)</a></li>
+  <li><a href="#materialize">Materialize</a></li>
+  <li><a href="#react-toolbox">React Toolbox</a></li>
+  </ul>
+      <h2>
+        <a class="anchor-link" id="material-ui"></a>Material-UI<a class="anchor-link-style" href="#material-ui">
+        </a></h2>
+    <p><img src="https://img.shields.io/github/stars/mui-org/material-ui.svg?style=social&amp;label=Stars" alt="stars">
+  <img src="https://img.shields.io/npm/dm/@material-ui/core.svg" alt="npm downloads"></p>
+  <p>We'll try very hard to avoid bias, although as the core team, we obviously like Material-UI a lot ❤️.
+  There are some problems we think it solves better than anything else out there; if we didn’t believe that, we wouldn’t be working on it 😄.</p>
+  <p>We do want to be fair and accurate though, so where other libraries offer significant advantages we try to list these as well.</p>
+  
+      <h2>
+        <a class="anchor-link" id="material-design-lite-mdl-"></a>Material Design Lite (MDL)<a class="anchor-link-style" href="#material-design-lite-mdl-">
+        </a></h2>
+    <p><img src="https://img.shields.io/github/stars/google/material-design-lite.svg?style=social&amp;label=Stars" alt="stars">
+  <img src="https://img.shields.io/npm/dm/material-design-lite.svg" alt="npm downloads"></p>
+  <p>Material Design Lite, while a very well-thought-out Material Design implementation,
+  was primarily maintained by Developer Relations at Google.
+  Today, <strong>the project is no longer maintained</strong>. So what happened?</p>
+  <p>The Material Components Web team started out building MDC-web as "MDL v2", but, after collaborating on it for a few months,
+  both teams felt it best to bring the project under the Material Design team's purview.
+  This shift meant a re-orientation of goals away from simply "adding a Material Design look and feel" to websites,
+  and towards the goal of a canonical Material Design implementation for the entire web platform.</p>
+  <h2>
+   <a class="anchor-link" id="material-components-web-mdc-web-"></a>Material Components Web (MDC-web)<a class="anchor-link-style" href="#material-components-web-mdc-web-">
+        </a></h2>
+    <p><img src="https://img.shields.io/github/stars/material-components/material-components-web.svg?style=social&amp;label=Stars" alt="stars">
+  <img src="https://img.shields.io/npm/dm/material-components-web.svg" alt="npm downloads"></p>
+  <p>We are very happy to see this project supported by Google and its design team.
+  It sends a clear signal that the <a href="https://material.io/design/">Material Design specification</a> is
+  here to stay, as they continue to invest in it.</p>
+  
+      <h3>
+        <a class="anchor-link" id="frameworks-and-libraries"></a>Frameworks and libraries<a class="anchor-link-style" href="#frameworks-and-libraries">
+        </a></h3>
+    <p>Material-UI focuses exclusively on the React library, although, given that Preact supports the very same API,
+  we hope to soon support it too. Supporting one framework allows us to do less but do it better.</p>
+  <p>This comes in different flavors:</p>
+  <ul>
+  <li>Having fewer constraints, we can make trade-offs specific to our target framework.
+  We have fewer edge-cases to take into account.</li>
+  <li>We can spend more time on nailing the React use case.</li>
+  </ul>
+  <p>MDC-web was designed from the ground up to be fully compatible with 3rd party JS frameworks and libraries.
+  They list 3rd-party framework integration projects in the github <a href="https://github.com/material-components/material-components-web/#material-components-for-the-web">README</a></p>
+  
+      <h3>
+        <a class="anchor-link" id="styling-solution"></a>Styling solution<a class="anchor-link-style" href="#styling-solution">
+        </a></h3>
+    <p><a href="https://github.com/oliviertassinari/a-journey-toward-better-style">Material-UI carries a heavy legacy with styles</a>.
+  Our very first release was using LESS, but seeing the limitation of this solution,
+  we quickly started looking into alternatives. Our first migration was towards using an inline-style solution.
+  This was promising:</p>
+  <ul>
+  <li>It allowed us to remove the dependency on the LESS toolchain for our users.
+  We removed one important friction in the installation process. (<strong>simpler</strong>)</li>
+  <li>We were able to change the theme at runtime, nest different themes, and have dynamic styles. (<strong>more powerful</strong>)</li>
+  <li>We reduced the loading time by breaking the big monolithic CSS file in order to enable code splitting. (<strong>faster</strong>)</li>
+  <li>The style override story became more intuitive, as we were free of CSS specificity issues. (<strong>simpler</strong>)</li>
+  </ul>
+  <p>Eventually, we reached the limitations of inline-styles and moved toward a CSS-in-JS
+  solution. This transition was made without losing the enhancements the first migration introduced 💅.
+  <strong>We strongly think that CSS-in-JS is the future of the web platform</strong>.
+  You can <a href="/customization/css-in-js">learn more about our new styling solution</a> in the documentation.</p>
+  <p>MDC-web relies on SCSS as Bootstrap v4. The SCSS architecture is pretty close to LESS -
+  a technology we replaced for its limitations.</p>
+  
+      <h3>
+        <a class="anchor-link" id="the-vision"></a>The vision<a class="anchor-link-style" href="#the-vision">
+        </a></h3>
+    <p>Our vision is to provide an elegant implementation of the Material Design guidelines <strong>and more</strong>.</p>
+  <blockquote>
+  <p>The Material Design guidelines are an incredible starting point, but they do not provide guidance on all aspects or needs of an application. In addition to the guideline-specific implementation, we want Material-UI to become whatever is generally useful for application development, all in the spirit of the Material Design guidelines.</p>
+  </blockquote>
+  <blockquote>
+  <p>*[An extract taken from the <a href="/discover-more/vision/">vision section</a> of the documentation.]*</p>
+  </blockquote>
+  <p>We want to see businesses succeeding in taking advantage of Material-UI to ship an awesome UI to their users
+  while having it match their brand, so we have invested a lot in the customization capabilities of Material-UI.</p>
+  <p>The only goal of MDC-Web is to be a Material Design implementation for the web platform. <strong>Nothing more, nothing less</strong>. They will not consider making changes to the components - especially UX changes - that would facilitate additional flexibility at the cost of breaking with the core Material Design system, as that is a non-goal of the project. *<a href="https://github.com/mui-org/material-ui/issues/6799#issuecomment-299925174">source</a>*</p>
+  
+      <h3>
+        <a class="anchor-link" id="tests"></a>Tests<a class="anchor-link-style" href="#tests">
+        </a></h3>
+    <p>Both projects invest a lot in tests. At the time of writing, both projects have over 99% test coverage:</p>
+  <ul>
+  <li>Material-UI has 1200+ unit tests running on Chrome 49, Firefox 45, Safari 10 and Edge 14.</li>
+  <li>MDC-web has 1200+ unit tests running on all the major browsers.</li>
+  </ul>
+  <p>Still, there is one thing that sets Material-UI apart and it's key:
+  We have <a href="https://www.argos-ci.com/mui-org/material-ui">hundreds of visual regression tests</a> when MDC-web doesn't have any.
+  With visual regression tests, you don't have to make any trade-off:</p>
+  <ul>
+  <li>You can spend less time making sure every contribution doesn't introduce unexpected regressions.
+  The <strong>less</strong> time you spend on a single contribution, the <strong>more</strong> contributions you can accept.</li>
+  <li>You can merge new contributions without digging much. Effectively, you are not waiting for users to report regressions. It's <strong>efficient</strong> and <strong>improves the library quality</strong>.</li>
+  </ul>
+  
+      <h2>
+        <a class="anchor-link" id="materialize"></a>Materialize<a class="anchor-link-style" href="#materialize">
+        </a></h2>
+    <p><img src="https://img.shields.io/github/stars/Dogfalo/materialize.svg?style=social&amp;label=Stars" alt="stars">
+  <img src="https://img.shields.io/npm/dm/materialize-css.svg" alt="npm downloads"></p>
+  
+      <h3>
+        <a class="anchor-link" id="browser-support"></a>Browser support<a class="anchor-link-style" href="#browser-support">
+        </a></h3>
+    <p>Materialize supports a wider range of browsers than Material-UI does, for instance,
+  they support IE 10 while <a href="/getting-started/supported-platforms">we only support IE 11</a>.
+  Only supporting IE 11 allows us to take full advantage of the flexbox layout.
+  IE 10 has many issues with flexbox.</p>
+  
+      <h3>
+        <a class="anchor-link" id="styling"></a>Styling solution<a class="anchor-link-style" href="#styling-solution">
+        </a></h3>
+    <p>Materialize uses SCSS, a styling architecture Material-UI moved away from 2 years ago.
+  We explain why in the <a href="#styling-solution">MDC-web section</a> above.</p>
+  
+      <h2>
+        <a class="anchor-link" id="react-toolbox"></a>React Toolbox<a class="anchor-link-style" href="#react-toolbox">
+        </a></h2>
+    <p><img src="https://img.shields.io/github/stars/react-toolbox/react-toolbox.svg?style=social&amp;label=Stars" alt="stars">
+  <img src="https://img.shields.io/npm/dm/react-toolbox.svg" alt="npm downloads"></p>
+  
+      <h3>
+        <a class="anchor-link"></a>Styling solution<a class="anchor-link-style" href="#styling-solution">
+        </a></h3>
+    <p>While both React Toolbox and Material-UI are betting on CSS-in-JS, we have taken a different trade-off.
+  Material-UI has chosen <strong>JSS</strong> while React Toolbox started rewriting their library with <strong>styled-components</strong>. We picked JSS over styled-components for the following reason:</p>
+  <ul>
+  <li>JSS exposes a low-level API:<ul>
+  <li>We are free to model it to our unique needs, which has allowed us to build one of the most advanced override and theming mechanism.</li>
+  <li>It's not coupled to React like <code>styled-components</code> is. It has the potential to reach any 3rd party JS frameworks and libraries. The parallels can be made with SCSS. SCSS is compatible with any JavaScript frameworks and libraries, helping it to get traction in the community.</li>
+  </ul>
+  </li>
+  <li>JSS is <a href="https://github.com/A-gambit/CSS-IN-JS-Benchmarks/blob/master/RESULT.md">two times faster</a> to mount components than styled-components is, with all the optimization turned on.</li>
+  </ul>
+  <p>This is not to say that Material-UI is opinionated about how users write their styles.
+  You can use styled-components if you would like to do so.</p>
+  </div>
+  </div>
+  </main>
+  </body>

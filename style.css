@@ -17,7 +17,7 @@ html, body {
     position: relative;
 }
 h1 {
-    font-size: 11rem;
+    font-size: 10%;
     letter-spacing: -0.2rem;
     color: #00cbff;
     display: inline-block;

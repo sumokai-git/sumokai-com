@@ -1,7 +1,46 @@
-File Not Found
-<br></br>
-sumokai.com by Sumokai 
-<br></br>
-<b>Apps :</b>
-<br></br>
-<a href="https://sumokai.com/apps/poge">Poge</a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Error 404</title>
+</head>
+<body onload="load()">
+  <h1 id="2"></h1>
+  <h2>File Not Found</h2>
+</body>
+</html>
+
+<style>
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+h2 { 
+	font: bold 2em monospace;
+  color: black;
+	border-right: .1em solid black;
+	width: calc(0.55em * 14); 
+	width: 14ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(14, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+h1 { 
+	font: bold 2em monospace;
+  color: black;
+	border-right: .1em solid black; 
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(14, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+</style>
+
+
+<script>
+function load(){
+document.getElementById("2").innerHTML = window.location.href
+}
+
+</script>
